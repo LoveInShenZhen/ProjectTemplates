@@ -22,3 +22,13 @@ gradle run --debug-jvm
 svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-lib
 
 ```
+
+### Kotlin Multi Projects
+```
+svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-multi-project
+
+cd kotlin-multi-project
+
+gradle :prj-app:run
+
+```
