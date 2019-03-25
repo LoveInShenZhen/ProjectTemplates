@@ -5,7 +5,7 @@
 
 ### Kotlin Application
 ```
-svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-app
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-app
 
 cd kotlin-app
 
@@ -19,13 +19,13 @@ gradle run --debug-jvm
 
 ### Kotlin Library
 ```
-svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-lib
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-lib
 
 ```
 
 ### Kotlin Multi Projects
 ```
-svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-multi-project
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-multi-project
 
 cd kotlin-multi-project
 
