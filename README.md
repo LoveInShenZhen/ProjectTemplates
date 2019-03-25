@@ -6,4 +6,13 @@
 ### Kotlin Application
 ```
 svn export https://github.com/kklongming/ProjectTemplates.git/trunk/kotlin-app
+
+cd kotlin-app
+
+# 运行命令如下
+gradle run
+
+# 调试命令如下, 调试端口 5005
+gradle run --debug-jvm
+
 ```
