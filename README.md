@@ -1,5 +1,6 @@
 # ProjectTemplates
-基于 Kotlin 的常用的项目工程模板
+* 基于 Kotlin 的常用的项目工程模板
+* 工程是基于 gradle 5.x 的版本构建的
 
 ## 项目模板列表
 
