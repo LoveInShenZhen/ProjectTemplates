@@ -5,9 +5,9 @@
 
 ### Kotlin Application
 ```
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-app
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-app {{project_name}}
 
-cd kotlin-app
+cd {{project_name}}
 
 # 运行命令如下
 gradle run
@@ -19,16 +19,36 @@ gradle run --debug-jvm
 
 ### Kotlin Library
 ```
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-lib
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-lib {{project_name}}
 
 ```
 
 ### Kotlin Multi Projects
 ```
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-multi-project
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-multi-project {{project_name}}
 
-cd kotlin-multi-project
+cd {{project_name}}
 
 gradle :prj-app:run
+
+```
+
+### 新增一个子项目 (Application类型)
+```
+cd {{root_project}}
+
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-app {{project_name}}
+
+echo 'include(":{{project_name}}")' >> settings.gradle.kts
+
+```
+
+### 新增一个子项目 (Library类型)
+```
+cd {{root_project}}
+
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-lib {{project_name}}
+
+echo 'include(":{{project_name}}")' >> settings.gradle.kts
 
 ```
