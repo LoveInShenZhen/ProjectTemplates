@@ -1,7 +1,7 @@
 # ProjectTemplates
 * 基于 Kotlin 的常用的项目工程模板
 * 工程是基于 gradle 5.x 的版本构建的
-* **注意:** 请将下文中的 **{{project_name}}** 替换成你要创建的应用的名称**
+* **注意:** 请将下文中的 **{{project_name}}** 替换成你要创建的应用的名称
 
 ## 项目模板列表
 
@@ -14,7 +14,8 @@ cd {{project_name}}
 # 运行命令如下
 gradle run
 
-# 调试命令如下, 调试端口 5005
+# 调试命令如下, 调试端口 5005, 
+# (注: 此为gradle下用IDE进行 remote debug的通用方法,以下其他工程不再复述)
 gradle run --debug-jvm
 
 ```
