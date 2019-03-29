@@ -1,6 +1,7 @@
 # ProjectTemplates
 * 基于 Kotlin 的常用的项目工程模板
 * 工程是基于 gradle 5.x 的版本构建的
+* **注意:** 请将下文中的 **{{project_name}}** 替换成你要创建的应用的名称**
 
 ## 项目模板列表
 
@@ -51,5 +52,30 @@ cd {{root_project}}
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-lib {{project_name}}
 
 echo 'include(":{{project_name}}")' >> settings.gradle.kts
+
+```
+
+### 基于 [sz-vertx-kotlin](https://github.com/LoveInShenZhen/sz-vertx-kotlin) 的 web api server 项目
+
+
+#### 构建步骤
+
+1 首先在本地构建 sz-vertx-kotlin, 并发布包到 localMaven
+
+```bash
+git clone https://github.com/kklongming/sz-vertx-kotlin.git
+
+cd sz-vertx-kotlin
+
+# 发布到本地的 mvaven 仓库, 我们的应用会通过本地的 maven 仓库添加 sz-vertx-kotlin 的依赖jar包
+gradle publishToMavenLocal 
+
+```
+
+2 按照如下的指令, 创建单一工程的简单应用或者包含多个子工程的应用
+
+* 单一工程的简单应用
+```
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-simple {{project_name}}
 
 ```
