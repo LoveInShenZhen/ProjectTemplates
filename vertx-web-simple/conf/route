@@ -1,0 +1,16 @@
+GET     /                                                                sz.scaffold.controller.builtIn.Default.hello
+POST    /                                                                sz.scaffold.controller.builtIn.Default.hello
+GET     /api/builtin/sysInfo                                             sz.scaffold.controller.builtIn.Default.sysInfo
+
+# 内置EBean
+GET     /api/builtin/ebean/CreateTablesSql                               controllers.builtin.szebean.CreateTablesSql     (dataSource = )
+GET     /api/builtin/ebean/DropTablesSql                                 controllers.builtin.szebean.DropTablesSql       (dataSource = )
+GET     /api/builtin/ebean/CreateIndexSql                                controllers.builtin.szebean.CreateIndexSql      (dataSource = )
+
+
+# Api 文档
+GET     /api/builtin/doc/apiIndex                                        sz.api.controllers.ApiDoc.apiIndex
+GET     /api/builtin/doc/apiTest                                         sz.api.controllers.ApiDoc.apiTest
+
+# 测试接口
+GET     /api/sample/hello                                                com.api.server.controller.Sample.hello
