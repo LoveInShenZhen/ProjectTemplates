@@ -85,3 +85,10 @@ distTar.into(project.name) {
     from(".")
     include("conf/**")
 }
+
+ebean {
+    debugLevel = 2
+    queryBeans = false
+    kotlin = true
+    generatorVersion = "11.4"
+}
