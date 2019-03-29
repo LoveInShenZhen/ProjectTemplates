@@ -36,7 +36,7 @@ gradle :prj-app:run
 
 ```
 
-### 新增一个子项目 (Application类型)
+### Multi Projects 下新增一个子工程 (Application类型)
 ```bash
 cd {{root_project}}
 
@@ -46,7 +46,7 @@ echo 'include(":{{project_name}}")' >> settings.gradle.kts
 
 ```
 
-### 新增一个子项目 (Library类型)
+### Multi Projects 下新增一个子工程 (Library类型)
 ```bash
 cd {{root_project}}
 
