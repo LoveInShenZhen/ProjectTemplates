@@ -6,7 +6,7 @@
 ## 项目模板列表
 
 ### Kotlin Application
-```
+```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-app {{project_name}}
 
 cd {{project_name}}
@@ -21,13 +21,13 @@ gradle run --debug-jvm
 ```
 
 ### Kotlin Library
-```
+```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-lib {{project_name}}
 
 ```
 
 ### Kotlin Multi Projects
-```
+```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-multi-project {{project_name}}
 
 cd {{project_name}}
@@ -37,7 +37,7 @@ gradle :prj-app:run
 ```
 
 ### 新增一个子项目 (Application类型)
-```
+```bash
 cd {{root_project}}
 
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-app {{project_name}}
@@ -47,7 +47,7 @@ echo 'include(":{{project_name}}")' >> settings.gradle.kts
 ```
 
 ### 新增一个子项目 (Library类型)
-```
+```bash
 cd {{root_project}}
 
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-lib {{project_name}}
@@ -76,7 +76,7 @@ gradle publishToMavenLocal
 2 按照如下的指令, 创建单一工程的简单应用或者包含多个子工程的应用
 
 * 单一工程的简单应用
-```
+```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-simple {{project_name}}
 
 ```
