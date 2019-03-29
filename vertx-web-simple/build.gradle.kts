@@ -88,7 +88,14 @@ distTar.into(project.name) {
 
 ebean {
     debugLevel = 2
-    queryBeans = false
+    queryBeans = true
     kotlin = true
     generatorVersion = "11.4"
 }
+
+//sourceSets {
+//    main {
+//        java.srcDirs.add(file("${buildDir.path}/generated/source/kaptKotlin/main"))
+//    }
+//}
+
