@@ -6,28 +6,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
  * This generated file contains a sample Kotlin application project to get you started.
  */
 
-buildscript {
-    repositories {
-        maven {
-            url = uri("https://plugins.gradle.org/m2/")
-        }
-    }
-    dependencies {
-        classpath("gradle.plugin.io.ebean:ebean-gradle-plugin:11.36.1")
-    }
-}
-
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     id("org.jetbrains.kotlin.jvm").version("1.3.21")
 
     // Apply the application plugin to add support for building a CLI application.
     application
-
-    id("io.ebean").version("11.36.1")
-    kotlin("kapt") version "1.3.21"
 }
-
 
 repositories {
     // Use jcenter for resolving your dependencies.
@@ -39,22 +24,21 @@ repositories {
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.21")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.21")
-    
-    implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:unspecified")
-    implementation("com.github.kklongming:sz-ebean:unspecified")
-    implementation("com.github.kklongming:sz-api-doc:unspecified")
-    implementation("com.github.kklongming:sz-plan-task:unspecified")
-
-    kapt("io.ebean:kotlin-querybean-generator:11.4.1")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+
+    implementation("com.github.kklongming:sz-scaffold:unspecified")
+    implementation("com.github.kklongming:sz-api-doc:unspecified")
+    implementation("com.github.kklongming:sz-plan-task:unspecified")
+
+    implementation(files("conf"))
+    implementation(project(":models"))
+    implementation(project(":common_lib"))
 
     configurations.all {
         this.exclude(group = "org.slf4j", module = "slf4j-log4j12")
@@ -71,6 +55,7 @@ val compileKotlin: KotlinCompile by tasks
 compileKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
+
 val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
@@ -87,17 +72,3 @@ distTar.into(project.name) {
     from(".")
     include("conf/**")
 }
-
-ebean {
-    debugLevel = 2
-    queryBeans = true
-    kotlin = true
-    generatorVersion = "11.4"
-}
-
-//sourceSets {
-//    main {
-//        java.srcDirs.add(file("${buildDir.path}/generated/source/kaptKotlin/main"))
-//    }
-//}
-

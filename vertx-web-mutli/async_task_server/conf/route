@@ -1,0 +1,6 @@
+# Api 文档
+GET     /api/builtin/doc/apiIndex                   sz.api.controllers.ApiDoc.apiIndex
+GET     /api/builtin/doc/apiTest                    sz.api.controllers.ApiDoc.apiTest
+
+GET     /api/builtin/sysInfo                        sz.scaffold.controller.builtIn.Default.sysInfo
+
