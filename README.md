@@ -78,5 +78,9 @@ gradle publishToMavenLocal
 * 单一工程的简单应用
 ```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-simple {{project_name}}
+```
 
+* 包含多个子工程的的应用
+```
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-mutli {{project_name}}
 ```
