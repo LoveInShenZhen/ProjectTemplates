@@ -81,6 +81,6 @@ svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-we
 ```
 
 * 包含多个子工程的的应用
-```
+```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-mutli {{project_name}}
 ```
