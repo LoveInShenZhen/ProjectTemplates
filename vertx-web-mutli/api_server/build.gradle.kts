@@ -35,6 +35,7 @@ dependencies {
     implementation("com.github.kklongming:sz-scaffold:unspecified")
     implementation("com.github.kklongming:sz-api-doc:unspecified")
     implementation("com.github.kklongming:sz-plan-task:unspecified")
+    implementation("com.github.kklongming:sz-ebean:unspecified")
 
     implementation(files("conf"))
     implementation(project(":models"))
