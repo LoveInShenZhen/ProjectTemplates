@@ -14,10 +14,10 @@ buildscript {
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.21")
+    id("org.jetbrains.kotlin.jvm").version("1.3.30")
     id("maven-publish")
     id("io.ebean").version("11.36.1")
-    kotlin("kapt") version "1.3.21"
+    kotlin("kapt") version "1.3.30"
 }
 
 repositories {
