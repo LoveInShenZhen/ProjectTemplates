@@ -1,6 +1,6 @@
 # ProjectTemplates
 * 基于 Kotlin 的常用的项目工程模板
-* 工程是基于 gradle 5.x 的版本构建的
+* 工程是基于 **gradle 5.x** 的版本构建的
 * **注意:** 请将下文中的 **{{project_name}}** 替换成你要创建的应用的名称
 
 ## 项目模板列表
@@ -78,5 +78,9 @@ gradle publishToMavenLocal
 * 单一工程的简单应用
 ```bash
 svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-simple {{project_name}}
+```
 
+* 包含多个子工程的的应用
+```bash
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-mutli {{project_name}}
 ```
