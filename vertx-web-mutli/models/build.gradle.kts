@@ -14,10 +14,11 @@ buildscript {
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.30")
+    id("org.jetbrains.kotlin.jvm")
+
     id("maven-publish")
     id("io.ebean").version("11.36.1")
-    kotlin("kapt") version "1.3.30"
+    kotlin("kapt")
 }
 
 repositories {
@@ -32,7 +33,7 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    implementation("com.github.kklongming:sz-ebean:unspecified")
+    api("com.github.kklongming:sz-ebean:unspecified")
     kapt("io.ebean:kotlin-querybean-generator:11.4.1")
 
     // Use the Kotlin test library.

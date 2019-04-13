@@ -8,7 +8,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.30")
+    id("org.jetbrains.kotlin.jvm")
+
+    // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     id("maven-publish")
 }
 
@@ -23,6 +25,9 @@ repositories {
 dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    // android gradle依赖：implementation 和compile的区别
+    // 参考: https://www.jianshu.com/p/f34c179bc9d0 根据需要选择使用不同的依赖设定方式
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

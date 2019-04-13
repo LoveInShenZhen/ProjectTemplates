@@ -10,6 +10,6 @@ class Library {
     }
 
     fun someMessage(): String {
-        return "==> Project ready !!!"
+        return "请开始你的表演 !!!"
     }
 }

@@ -6,14 +6,10 @@
  */
 
 plugins {
-    java
+    // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
+    id("org.jetbrains.kotlin.jvm").version("1.3.30").apply(false)
 }
 
 allprojects {
 
-}
-
-dependencies {
-    implementation(project(":api_server"))
-    implementation(project(":async_task_server"))
 }

@@ -5,6 +5,11 @@
  * Learn how to create Gradle builds at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+plugins {
+    // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
+    id("org.jetbrains.kotlin.jvm").version("1.3.30").apply(false)
+}
+
 allprojects {
 
 }

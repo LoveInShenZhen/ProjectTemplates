@@ -8,7 +8,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.30")
+    id("org.jetbrains.kotlin.jvm")
 
     // Apply the application plugin to add support for building a CLI application.
     application
@@ -35,7 +35,6 @@ dependencies {
     implementation("com.github.kklongming:sz-scaffold:unspecified")
     implementation("com.github.kklongming:sz-api-doc:unspecified")
     implementation("com.github.kklongming:sz-plan-task:unspecified")
-    implementation("com.github.kklongming:sz-ebean:unspecified")
 
     implementation(files("conf"))
     implementation(project(":models"))
