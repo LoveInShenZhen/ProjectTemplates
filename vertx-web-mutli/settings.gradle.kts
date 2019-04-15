@@ -7,8 +7,6 @@
  * in the user manual at https://docs.gradle.org/5.3/userguide/multi_project_builds.html
  */
 
-rootProject.name = "vertx-web-mutli"
-
 include(":models")
 include(":common_lib")
 include(":async_task_server")
