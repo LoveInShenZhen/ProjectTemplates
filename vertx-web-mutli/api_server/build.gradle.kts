@@ -32,13 +32,13 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
-    implementation("com.github.kklongming:sz-scaffold:unspecified")
-    implementation("com.github.kklongming:sz-api-doc:unspecified")
-    implementation("com.github.kklongming:sz-plan-task:unspecified")
+    api("com.github.kklongming:sz-scaffold:unspecified")
+    api("com.github.kklongming:sz-api-doc:unspecified")
+    api("com.github.kklongming:sz-plan-task:unspecified")
 
     implementation(files("conf"))
-    implementation(project(":models"))
-    implementation(project(":common_lib"))
+    api(project(":models"))
+    api(project(":common_lib"))
 
     configurations.all {
         this.exclude(group = "org.slf4j", module = "slf4j-log4j12")
