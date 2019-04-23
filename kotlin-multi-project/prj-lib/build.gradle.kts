@@ -24,7 +24,9 @@ repositories {
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation(kotlin("stdlib-jdk8"))
+    //implementation(kotlin("reflect"))
+    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.0")
 
     // android gradle依赖：implementation 和compile的区别
     // 参考: https://www.jianshu.com/p/f34c179bc9d0 根据需要选择使用不同的依赖设定方式
