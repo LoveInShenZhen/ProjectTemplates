@@ -43,10 +43,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.30")
     
     implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:unspecified")
-    implementation("com.github.kklongming:sz-ebean:unspecified")
-    implementation("com.github.kklongming:sz-api-doc:unspecified")
-    implementation("com.github.kklongming:sz-plan-task:unspecified")
+    implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
+    implementation("com.github.kklongming:sz-ebean:2.0.0-dev")
+    implementation("com.github.kklongming:sz-api-doc:2.0.0-dev")
+    implementation("com.github.kklongming:sz-plan-task:2.0.0-dev")
 
     kapt("io.ebean:kotlin-querybean-generator:11.4.1")
 

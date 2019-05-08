@@ -35,7 +35,7 @@ dependencies {
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.0")
 
-    api("com.github.kklongming:sz-ebean:unspecified")
+    api("com.github.kklongming:sz-ebean:2.0.0-dev")
     kapt("io.ebean:kotlin-querybean-generator:11.4.1")
 
     // Use the Kotlin test library.
