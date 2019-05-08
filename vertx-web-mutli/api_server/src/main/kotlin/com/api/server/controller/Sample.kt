@@ -17,7 +17,7 @@ class Sample : ApiController() {
     fun hello() : HelloReply {
         val reply = HelloReply()
 
-        reply.msg = "Hello, today is ${JDateTime().toString("YYYY-MM-DD")}."
+        reply.msg = "Hello, now tim is ${JDateTime().toString("YYYY-MM-DD hh:mm:ss")}."
 
         Logger.debug(reply.msg)
 
