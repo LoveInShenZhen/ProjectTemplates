@@ -1,10 +1,11 @@
 package models
 
 import io.ebean.Finder
-import io.ebean.Model
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
 import models.query.QUser
+import sz.DB
+import sz.EntityBean.BaseModel
 import java.sql.Timestamp
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -16,7 +17,7 @@ import javax.persistence.Version
 //
 
 @Entity
-class User : Model() {
+class User : BaseModel() {
 
     @Id
     var id: Long = 0
@@ -41,12 +42,20 @@ class User : Model() {
 
     companion object : Finder<Long, User>(User::class.java) {
 
+        fun finder(dsName: String = DB.currentDataSource()) : Finder<Long, User> {
+            return finder<Long, User>(dsName)
+        }
+
+        fun queryBean(dsName: String = DB.currentDataSource()): QUser {
+            return QUser(DB.byDataSource(dsName))
+        }
+
         fun findByName(name: String): User? {
-            return QUser().name.eq(name).findOne()
+            return queryBean().name.eq(name).findOne()
         }
 
         fun valid(name: String, pwd: String): Boolean {
-            return QUser()
+            return queryBean()
                     .name.eq(name)
                     .pwd.eq(pwd)
                     .findCount() > 0
