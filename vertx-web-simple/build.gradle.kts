@@ -19,13 +19,13 @@ buildscript {
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.30")
+    id("org.jetbrains.kotlin.jvm").version("1.3.31")
 
     // Apply the application plugin to add support for building a CLI application.
     application
 
     id("io.ebean").version("11.36.1")
-    kotlin("kapt") version "1.3.30"
+    kotlin("kapt") version "1.3.31"
 }
 
 
@@ -39,8 +39,8 @@ repositories {
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.30")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.30")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.31")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.31")
     
     implementation(files("conf"))
     implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
