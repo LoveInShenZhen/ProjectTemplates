@@ -39,8 +39,8 @@ repositories {
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.3.31")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.3.31")
+    implementation(kotlin("stdlib-jdk8"))
+    implementation(kotlin("reflect"))
     
     implementation(files("conf"))
     implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
