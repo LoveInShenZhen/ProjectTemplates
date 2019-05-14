@@ -24,6 +24,9 @@ plugins {
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    maven {
+        url = uri("http://kklongming.github.io/repository")
+    }
     mavenLocal()
     mavenCentral()
     jcenter()
@@ -35,7 +38,7 @@ dependencies {
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.0")
 
-    api("com.github.kklongming:sz-ebean:2.0.0-dev")
+    api("com.github.kklongming:sz-ebean:2.0.0-latest")
     kapt("io.ebean:kotlin-querybean-generator:11.4.1")
 
     // Use the Kotlin test library.

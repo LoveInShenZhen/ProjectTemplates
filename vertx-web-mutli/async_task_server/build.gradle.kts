@@ -17,6 +17,9 @@ plugins {
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    maven {
+        url = uri("http://kklongming.github.io/repository")
+    }
     mavenLocal()
     mavenCentral()
     jcenter()
@@ -34,9 +37,9 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
-    implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
-    implementation("com.github.kklongming:sz-api-doc:2.0.0-dev")
-    implementation("com.github.kklongming:sz-plan-task:2.0.0-dev")
+    implementation("com.github.kklongming:sz-scaffold:2.0.0-latest")
+    implementation("com.github.kklongming:sz-api-doc:2.0.0-latest")
+    implementation("com.github.kklongming:sz-plan-task:2.0.0-latest")
 
     implementation(files("conf"))
     implementation(project(":models"))

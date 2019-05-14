@@ -17,6 +17,9 @@ plugins {
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
+    maven {
+        url = uri("http://kklongming.github.io/repository")
+    }
     mavenLocal()
     mavenCentral()
     jcenter()
