@@ -7,9 +7,6 @@ import sz.SzEbeanConfig
 import sz.scaffold.Application
 import sz.scaffold.tools.logger.Logger
 
-//
-// Created by kk on 17/9/9.
-//
 
 object PlantaskServer {
 

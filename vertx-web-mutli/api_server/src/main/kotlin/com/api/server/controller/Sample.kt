@@ -6,9 +6,6 @@ import sz.scaffold.annotations.Comment
 import sz.scaffold.controller.ApiController
 import sz.scaffold.tools.logger.Logger
 
-//
-// Created by kk on 2017/12/13.
-//
 
 @Comment("测试代码")
 class Sample : ApiController() {
