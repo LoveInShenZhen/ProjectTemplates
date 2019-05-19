@@ -98,6 +98,16 @@ ebean {
     generatorVersion = "11.4"
 }
 
+tasks.register<Delete>("removeLocalSzJarsCache") {
+    val localMaven = this.project.repositories.mavenLocal()
+    val path = localMaven.url.path + listOf("com", "github", "kklongming").joinToString(separator = File.separator)
+    this.delete(path)
+    println("remove Local Maven Cache For Sz Framework: $path")
+    val gradleCachePath = listOf(this.project.gradle.gradleUserHomeDir.path, "caches", "modules-2", "files-2.1", "com.github.kklongming").joinToString(separator = File.separator)
+    this.delete(gradleCachePath)
+    println("remove Local Gradle Cache For Sz Framework: $gradleCachePath")
+}
+
 //sourceSets {
 //    main {
 //        java.srcDirs.add(file("${buildDir.path}/generated/source/kaptKotlin/main"))
