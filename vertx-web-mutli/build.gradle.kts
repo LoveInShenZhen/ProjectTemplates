@@ -19,7 +19,9 @@ tasks.register<Delete>("removeLocalSzJarsCache") {
     val path = localMaven.url.path + listOf("com", "github", "kklongming").joinToString(separator = File.separator)
     this.delete(path)
     println("remove Local Maven Cache For Sz Framework: $path")
-    val gradleCachePath = listOf(this.project.gradle.gradleUserHomeDir.path, "caches", "modules-2", "files-2.1", "com.github.kklongming").joinToString(separator = File.separator)
-    this.delete(gradleCachePath)
-    println("remove Local Gradle Cache For Sz Framework: $gradleCachePath")
+    val gradleJsrCachePath = listOf(this.project.gradle.gradleUserHomeDir.path, "caches", "modules-2", "files-2.1", "com.github.kklongming").joinToString(separator = File.separator)
+    val gradleMetaCachePath1 = listOf(this.project.gradle.gradleUserHomeDir.path, "caches", "modules-2", "metadata-2.23", "descriptors", "com.github.kklongming").joinToString(separator = File.separator)
+    val gradleMetaCachePath2 = listOf(this.project.gradle.gradleUserHomeDir.path, "caches", "modules-2", "metadata-2.71", "descriptors", "com.github.kklongming").joinToString(separator = File.separator)
+    this.delete(gradleJsrCachePath, gradleMetaCachePath1, gradleMetaCachePath2)
+    println("remove Local Gradle Cache For Sz Framework: $gradleJsrCachePath")
 }
