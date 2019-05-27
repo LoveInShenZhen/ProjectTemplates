@@ -1,7 +1,7 @@
 package models
 
 import io.ebean.Finder
-import io.ebean.Model
+import io.ebean.Query
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
 import models.query.QUser
@@ -41,10 +41,14 @@ class User : BaseModel() {
     @Column(columnDefinition = "TEXT COMMENT '备注信息'")
     var remarks: String? = null
 
-    companion object : Finder<Long, User>(User::class.java) {
+    companion object {
 
-        fun finder(dsName: String = DB.currentDataSource()) : Finder<Long, User> {
+        fun finder(dsName: String = DB.currentDataSource()): Finder<Long, User> {
             return finder<Long, User>(dsName)
+        }
+
+        fun query(dsName: String = DB.currentDataSource()): Query<User> {
+            return finder(dsName).query()
         }
 
         fun queryBean(dsName: String = DB.currentDataSource()): QUser {
