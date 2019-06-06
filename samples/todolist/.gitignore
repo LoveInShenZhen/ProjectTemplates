@@ -30,7 +30,6 @@ RUNNING_PID
 *.iml
 *.ipr
 *.iws
-**/conf/version_info
 
 # office temp files
 ~$*
