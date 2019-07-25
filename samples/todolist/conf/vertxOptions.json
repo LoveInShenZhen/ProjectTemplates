@@ -1,4 +1,5 @@
 {
   "clustered" : false,
-  "workerPoolSize" : 20
+  "workerPoolSize" : 16,
+  "preferNativeTransport" : true
 }
