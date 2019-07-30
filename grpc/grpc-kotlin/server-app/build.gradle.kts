@@ -25,6 +25,8 @@ repositories {
     jcenter()
 }
 
+val grpcVersion = "1.22.1"
+
 dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation(kotlin("stdlib-jdk8"))
@@ -37,7 +39,7 @@ dependencies {
 
     implementation(project(":proto-lib"))
     implementation("com.github.kklongming:sz-tools:2.0.0-dev")
-    implementation("io.grpc:grpc-netty-shaded:1.22.1")
+    implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
 
 //    configurations.all {
 //        this.exclude(group = "org.slf4j", module = "slf4j-log4j12")

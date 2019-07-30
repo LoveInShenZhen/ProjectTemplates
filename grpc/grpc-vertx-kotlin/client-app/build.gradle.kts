@@ -25,8 +25,6 @@ repositories {
     jcenter()
 }
 
-val grpcVersion = "1.22.1"
-
 dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation(kotlin("stdlib-jdk8"))
@@ -40,8 +38,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     implementation(project(":proto-lib"))
-    implementation("com.github.kklongming:sz-tools:2.0.0-dev")
-    implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
+    implementation("io.vertx:vertx-grpc:3.8.0")
+    implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
 
 //    configurations.all {
 //        this.exclude(group = "org.slf4j", module = "slf4j-log4j12")

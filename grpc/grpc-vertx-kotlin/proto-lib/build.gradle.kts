@@ -29,7 +29,7 @@ repositories {
     jcenter()
 }
 
-val grpcVersion = "1.22.1"
+val grpcVersion = "1.20.0"
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
@@ -44,6 +44,7 @@ dependencies {
     api("com.google.protobuf:protobuf-java:3.6.1")
     api("io.grpc:grpc-stub:$grpcVersion")
     api("io.grpc:grpc-protobuf:$grpcVersion")
+    api("io.vertx:vertx-grpc:3.8.0")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -88,7 +89,7 @@ protobuf {
         // the identifier, which can be referred to in the "plugins"
         // container of the "generateProtoTasks" closure.
         id("grpc") {
-            artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion"
+            artifact = "io.vertx:protoc-gen-grpc-java:$grpcVersion"
         }
     }
     generateProtoTasks {
