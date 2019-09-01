@@ -19,13 +19,13 @@ buildscript {
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.41")
+    id("org.jetbrains.kotlin.jvm").version("1.3.50")
 
     // Apply the application plugin to add support for building a CLI application.
     application
 
     id("io.ebean").version("11.36.1")
-    kotlin("kapt") version "1.3.41"
+    kotlin("kapt") version "1.3.50"
 }
 
 
