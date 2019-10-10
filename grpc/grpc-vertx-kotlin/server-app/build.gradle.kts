@@ -36,7 +36,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     implementation(project(":proto-lib"))
-    implementation("io.vertx:vertx-grpc:3.8.0")
+    implementation("io.vertx:vertx-grpc:3.8.2")
     implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
 
 //    configurations.all {
