@@ -7,7 +7,7 @@
 
 ### Kotlin Application
 ```bash
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-app {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/kotlin-app {{project_name}}
 
 cd {{project_name}}
 
@@ -22,13 +22,13 @@ gradle run --debug-jvm
 
 ### Kotlin Library
 ```bash
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-lib {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/kotlin-lib {{project_name}}
 
 ```
 
 ### Kotlin Multi Projects
 ```bash
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/kotlin-multi-project {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/kotlin-multi-project {{project_name}}
 
 cd {{project_name}}
 
@@ -40,7 +40,7 @@ gradle :prj-app:run
 ```bash
 cd {{root_project}}
 
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-app {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/empty-app {{project_name}}
 
 echo 'include(":{{project_name}}")' >> settings.gradle.kts
 
@@ -50,7 +50,7 @@ echo 'include(":{{project_name}}")' >> settings.gradle.kts
 ```bash
 cd {{root_project}}
 
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/empty-lib {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/empty-lib {{project_name}}
 
 echo 'include(":{{project_name}}")' >> settings.gradle.kts
 
@@ -77,10 +77,10 @@ gradle publishToMavenLocal
 
 * 单一工程的简单应用
 ```bash
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-simple {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/vertx-web-simple {{project_name}}
 ```
 
 * 包含多个子工程的的应用
 ```bash
-svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/trunk/vertx-web-mutli {{project_name}}
+svn export https://github.com/LoveInShenZhen/ProjectTemplates.git/branches/v2.0.0/vertx-web-mutli {{project_name}}
 ```
