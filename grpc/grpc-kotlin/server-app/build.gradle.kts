@@ -38,7 +38,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
     implementation(project(":proto-lib"))
-    implementation("com.github.kklongming:sz-tools:2.0.0-dev")
+    implementation("com.github.kklongming:sz-tools:3.0.0-latest")
     implementation("io.grpc:grpc-netty-shaded:$grpcVersion")
 
 //    configurations.all {

@@ -37,7 +37,7 @@ dependencies {
 
     implementation(project(":proto-lib"))
     implementation("io.vertx:vertx-grpc:3.8.3")
-    implementation("com.github.kklongming:sz-scaffold:2.0.0-dev")
+    implementation("com.github.kklongming:sz-scaffold:3.0.0-latest")
 
 //    configurations.all {
 //        this.exclude(group = "org.slf4j", module = "slf4j-log4j12")

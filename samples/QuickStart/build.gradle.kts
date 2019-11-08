@@ -46,10 +46,10 @@ dependencies {
     implementation(kotlin("reflect"))
     
     implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:2.0.0-latest")
-    implementation("com.github.kklongming:sz-ebean:2.0.0-latest")
-    implementation("com.github.kklongming:sz-api-doc:2.0.0-latest")
-    implementation("com.github.kklongming:sz-plan-task:2.0.0-latest")
+    implementation("com.github.kklongming:sz-scaffold:3.0.0-latest")
+    implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
+    implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
+    implementation("com.github.kklongming:sz-plan-task:3.0.0-latest")
 
     kapt("io.ebean:kotlin-querybean-generator:11.4.1")
 
