@@ -28,10 +28,12 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
     
-    implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:3.0.0-latest")
-    implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
-    implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
+    api(files("conf"))
+    api("com.github.kklongming:sz-scaffold:3.0.0-latest")
+    api("com.github.kklongming:sz-ebean:3.0.0-latest")
+    api("com.github.kklongming:sz-api-doc:3.0.0-latest")
+    api("com.h2database:h2:1.4.200")
+
 
     kapt("io.ebean:kotlin-querybean-generator:12.1.1")
 
