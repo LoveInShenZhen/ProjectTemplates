@@ -1,6 +1,6 @@
 package com.api.server
 
-import sz.SzEbeanConfig
+import sz.ebean.SzEbeanConfig
 import sz.scaffold.Application
 
 

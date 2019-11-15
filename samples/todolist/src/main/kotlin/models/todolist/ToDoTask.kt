@@ -1,21 +1,22 @@
 package models.todolist
 
 import io.ebean.Finder
+import io.ebean.Model
 import io.ebean.Query
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
 import jodd.datetime.JDateTime
 import models.todolist.query.QToDoTask
-import sz.DB
-import sz.EntityBean.BaseModel
+import sz.ebean.DB
 import java.sql.Timestamp
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.Version
 
+@Suppress("MemberVisibilityCanBePrivate")
 @Entity
-class ToDoTask : BaseModel() {
+class ToDoTask(dataSource: String = "") : Model(dataSource) {
 
     @Id
     var id: Long = 0
@@ -44,7 +45,7 @@ class ToDoTask : BaseModel() {
     @Column(columnDefinition = "TINYINT(1) COMMENT '标记删除'")
     var deleted: Boolean = false
 
-    fun markFinished(newStatus:Boolean) {
+    fun markFinished(newStatus: Boolean) {
         if (finished != newStatus) {
             if (newStatus) {
                 // 未完成 ==> 完成
@@ -61,7 +62,7 @@ class ToDoTask : BaseModel() {
     companion object {
 
         fun finder(dsName: String = DB.currentDataSource()): Finder<Long, ToDoTask> {
-            return finder<Long, ToDoTask>(dsName)
+            return DB.finder(dsName)
         }
 
         fun query(dsName: String = DB.currentDataSource()): Query<ToDoTask> {
