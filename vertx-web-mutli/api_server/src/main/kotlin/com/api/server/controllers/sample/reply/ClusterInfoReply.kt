@@ -17,4 +17,10 @@ class ClusterInfoReply : ReplyBase() {
 
     @Comment("集群模式下, 集群内所有的节点ID")
     var cluster_nodes = setOf<String>()
+
+    override fun SampleData() {
+        in_cluster = true
+        node_id = "5eec2dd5-2f74-4b9c-baee-7d456bad6acc"
+        cluster_nodes = setOf("5eec2dd5-2f74-4b9c-baee-7d456bad6acc", "c701eaab-4571-4ff8-8cbf-3b5fcbd22d1a")
+    }
 }

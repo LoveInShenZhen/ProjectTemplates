@@ -16,8 +16,6 @@ class UserListReply : ReplyBase() {
     var users = listOf<DUser>()
 
     override fun SampleData() {
-        super.SampleData()
-
         users = listOf(
             DUser(
                 user_id = UUID.randomUUID(),
@@ -29,13 +27,13 @@ class UserListReply : ReplyBase() {
                 user_id = UUID.randomUUID(),
                 user_name = "李四",
                 remarks = "备注信息:XXXXXXXXXX",
-                create_time = JDateTime("2019-02-14 09:35:20", "YYYY-MM-DD hh:mm:ss")
+                create_time = JDateTime("2019-02-08 19:15:22", "YYYY-MM-DD hh:mm:ss")
             ),
             DUser(
                 user_id = UUID.randomUUID(),
                 user_name = "王五",
                 remarks = "备注信息:XXXXXXXXXX",
-                create_time = JDateTime("2019-02-14 09:35:20", "YYYY-MM-DD hh:mm:ss")
+                create_time = JDateTime("2019-03-15 12:05:13", "YYYY-MM-DD hh:mm:ss")
             )
         )
     }
