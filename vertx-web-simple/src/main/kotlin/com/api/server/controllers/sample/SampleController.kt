@@ -1,16 +1,15 @@
-package com.api.server.controller
+package com.api.server.controllers.sample
 
-import com.api.server.controller.reply.DUser
-import com.api.server.controller.reply.HelloReply
-import com.api.server.controller.reply.UserListReply
+import com.api.server.controllers.sample.reply.DUser
+import com.api.server.controllers.sample.reply.HelloReply
+import com.api.server.controllers.sample.reply.UserListReply
 import jodd.datetime.JDateTime
 import jodd.util.RandomString
-import models.User
+import models.sample.User
 import sz.ebean.DB
 import sz.ebean.DDL
 import sz.ebean.runTransactionBlocking
 import sz.scaffold.annotations.Comment
-import sz.scaffold.cache.redis.RedisAsyncCache
 import sz.scaffold.controller.ApiController
 import sz.scaffold.controller.ContentTypes
 import sz.scaffold.controller.reply.ReplyBase
@@ -22,7 +21,7 @@ import java.util.*
 
 @Suppress("DuplicatedCode")
 @Comment("测试样例代码")
-class Sample : ApiController() {
+class SampleController : ApiController() {
 
     @Comment("测试接口")
     suspend fun hello(@Comment("访问者名称") name: String): HelloReply {
@@ -103,22 +102,6 @@ class Sample : ApiController() {
             }
         }
 
-        return reply
-    }
-
-    @Comment("测试Redis - set")
-    suspend fun redisTestSet(key: String, value: String): ReplyBase {
-        val reply = ReplyBase()
-
-        RedisAsyncCache.default.setAwait(key = key, valueTxt = value)
-
-        return reply
-    }
-
-    @Comment("测试Redis - get")
-    suspend fun redisTestGet(key: String): HelloReply {
-        val reply = HelloReply()
-        reply.msg = RedisAsyncCache.default.getOrElseAwait(key) { "Not Exists" }
         return reply
     }
 

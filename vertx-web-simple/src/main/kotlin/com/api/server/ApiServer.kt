@@ -17,7 +17,7 @@ object ApiServer {
         val h2dbPath = FileNameUtil.concat(Application.appHome, "h2db")
         FileUtil.mkdirs(h2dbPath)
 
-        val h2Port = "9123"
+        val h2Port = "9527"
         val h2server = H2Server.createTcpServer("-tcpPort", h2Port, "-tcpAllowOthers", "-ifNotExists", "-baseDir", h2dbPath)
         h2server.start()
         Logger.info("Start h2 database server on localhost:$h2Port")

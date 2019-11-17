@@ -1,8 +1,8 @@
-package com.api.server.controller.reply
+package com.api.server.controllers.sample.reply
 
 import jodd.datetime.JDateTime
 import jodd.datetime.ext.toJDateTime
-import models.User
+import models.sample.User
 import sz.scaffold.annotations.Comment
 import sz.scaffold.controller.reply.ReplyBase
 import java.util.*
