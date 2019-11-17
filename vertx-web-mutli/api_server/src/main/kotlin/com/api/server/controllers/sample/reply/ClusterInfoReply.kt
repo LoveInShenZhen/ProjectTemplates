@@ -1,6 +1,5 @@
-package com.api.server.controller.reply
+package com.api.server.controllers.sample.reply
 
-import com.sun.org.apache.xpath.internal.operations.Bool
 import sz.scaffold.annotations.Comment
 import sz.scaffold.controller.reply.ReplyBase
 

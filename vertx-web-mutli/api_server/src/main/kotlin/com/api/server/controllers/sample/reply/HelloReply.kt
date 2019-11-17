@@ -1,4 +1,4 @@
-package com.api.server.controller.reply
+package com.api.server.controllers.sample.reply
 
 import sz.scaffold.annotations.Comment
 import sz.scaffold.controller.reply.ReplyBase

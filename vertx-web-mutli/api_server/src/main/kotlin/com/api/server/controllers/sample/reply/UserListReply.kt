@@ -16,8 +16,6 @@ class UserListReply : ReplyBase() {
     var users = listOf<DUser>()
 
     override fun SampleData() {
-        super.SampleData()
-
         users = listOf(
             DUser(
                 user_id = UUID.randomUUID(),

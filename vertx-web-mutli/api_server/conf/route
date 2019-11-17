@@ -18,13 +18,13 @@ GET     /api/builtin/doc/pageIndex                                      sz.api.c
 GET     /api/builtin/doc/pageTest                                       sz.api.controllers.ApiDoc.pageTest
 
 # 测试接口
-GET     /api/sample/hello                                               com.api.server.controller.Sample.hello
-GET     /api/sample/clusterInfo                                         com.api.server.controller.Sample.clusterInfo
-GET     /api/sample/newUser                                             com.api.server.controller.Sample.newUser
-GET     /api/sample/userList                                            com.api.server.controller.Sample.userList
-GET     /api/sample/delUser                                             com.api.server.controller.Sample.delUser
-GET     /api/sample/sendSms                                             com.api.server.controller.Sample.sendSms
-GET     /api/sample/processOrder                                        com.api.server.controller.Sample.processOrder
+GET     /api/sample/hello                                               com.api.server.controllers.sample.SampleController.hello
+GET     /api/sample/clusterInfo                                         com.api.server.controllers.sample.SampleController.clusterInfo
+GET     /api/sample/newUser                                             com.api.server.controllers.sample.SampleController.newUser
+GET     /api/sample/userList                                            com.api.server.controllers.sample.SampleController.userList
+GET     /api/sample/delUser                                             com.api.server.controllers.sample.SampleController.delUser
+GET     /api/sample/sendSms                                             com.api.server.controllers.sample.SampleController.sendSms
+GET     /api/sample/processOrder                                        com.api.server.controllers.sample.SampleController.processOrder
 
-GET     /api/sample/createDdl                                           com.api.server.controller.Sample.createDdl
-GET     /api/sample/dropAllDdl                                          com.api.server.controller.Sample.dropAllDdl
+GET     /api/sample/createDdl                                           com.api.server.controllers.sample.SampleController.createDdl
+GET     /api/sample/dropAllDdl                                          com.api.server.controllers.sample.SampleController.dropAllDdl

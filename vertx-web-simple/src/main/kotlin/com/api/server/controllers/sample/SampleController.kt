@@ -35,7 +35,7 @@ class SampleController : ApiController() {
     }
 
     @Suppress("UNREACHABLE_CODE")
-    @Comment("数据库操作测试")
+    @Comment("数据库操作测试: 嵌套事务方式,新增2个用户,用户信息随机生成")
     suspend fun newUser(): ReplyBase {
         val reply = ReplyBase()
         Logger.debug("准备数据库操作")
@@ -72,7 +72,7 @@ class SampleController : ApiController() {
         return reply
     }
 
-    @Comment("数据库查询测试")
+    @Comment("数据库查询测试: 查询用户列表, 代码里显示指定数据库事务为ReadOnly,优化性能")
     suspend fun userList(): UserListReply {
         val reply = UserListReply()
 
@@ -86,7 +86,7 @@ class SampleController : ApiController() {
     }
 
     @Suppress("IfThenToElvis")
-    @Comment("数据库删除指定记录测试")
+    @Comment("数据库删除操作测试: 根据用户UUID, 删除指定用户")
     suspend fun delUser(@Comment("用户UUID") user_id: String): ReplyBase {
         val reply = ReplyBase()
 

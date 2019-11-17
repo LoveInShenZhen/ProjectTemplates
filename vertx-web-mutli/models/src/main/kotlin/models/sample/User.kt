@@ -1,4 +1,4 @@
-package models
+package models.sample
 
 
 import io.ebean.Finder
@@ -7,7 +7,7 @@ import io.ebean.Query
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
 import jodd.crypt.DigestEngine
-import models.query.QUser
+import models.sample.query.QUser
 import sz.annotations.DBIndexed
 import sz.ebean.DB
 import sz.scaffold.ext.zeroUUID

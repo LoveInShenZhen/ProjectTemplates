@@ -1,24 +1,21 @@
-package com.api.server.controller
+package com.api.server.controllers.sample
 
-import com.api.server.controller.reply.ClusterInfoReply
-import com.api.server.controller.reply.DUser
-import com.api.server.controller.reply.HelloReply
-import com.api.server.controller.reply.UserListReply
+import com.api.server.controllers.sample.reply.ClusterInfoReply
+import com.api.server.controllers.sample.reply.DUser
+import com.api.server.controllers.sample.reply.HelloReply
+import com.api.server.controllers.sample.reply.UserListReply
 import com.sz.tasks.FakeProcessOrder
 import com.sz.tasks.FakeSendSms
 import jodd.datetime.JDateTime
 import jodd.util.RandomString
 import models.PlanTask
-import models.User
+import models.sample.User
 import sz.AsynTask.AsyncTask
-import sz.PlanTaskService
 import sz.ebean.DB
 import sz.ebean.DDL
-import sz.ebean.runTransactionAwait
 import sz.ebean.runTransactionBlocking
 import sz.scaffold.Application
 import sz.scaffold.annotations.Comment
-import sz.scaffold.cache.redis.RedisAsyncCache
 import sz.scaffold.controller.ApiController
 import sz.scaffold.controller.ContentTypes
 import sz.scaffold.controller.reply.ReplyBase
@@ -34,7 +31,7 @@ import java.util.*
 
 @Suppress("DuplicatedCode")
 @Comment("测试样例代码")
-class Sample : ApiController() {
+class SampleController : ApiController() {
 
     @Comment("测试接口")
     suspend fun hello(@Comment("访问者名称") name: String): HelloReply {
@@ -61,7 +58,7 @@ class Sample : ApiController() {
     }
 
     @Suppress("UNREACHABLE_CODE")
-    @Comment("数据库操作测试")
+    @Comment("数据库操作测试: 嵌套事务方式,新增2个用户,用户信息随机生成")
     suspend fun newUser(): ReplyBase {
         val reply = ReplyBase()
         Logger.debug("准备数据库操作")
@@ -98,7 +95,7 @@ class Sample : ApiController() {
         return reply
     }
 
-    @Comment("数据库查询测试")
+    @Comment("数据库查询测试: 查询用户列表, 代码里显示指定数据库事务为ReadOnly,优化性能")
     suspend fun userList(): UserListReply {
         val reply = UserListReply()
 
@@ -112,7 +109,7 @@ class Sample : ApiController() {
     }
 
     @Suppress("IfThenToElvis")
-    @Comment("数据库删除指定记录测试")
+    @Comment("数据库删除操作测试: 根据用户UUID, 删除指定用户")
     suspend fun delUser(@Comment("用户UUID") user_id: String): ReplyBase {
         val reply = ReplyBase()
 
