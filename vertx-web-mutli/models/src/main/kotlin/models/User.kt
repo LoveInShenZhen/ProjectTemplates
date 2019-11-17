@@ -1,14 +1,15 @@
 package models
 
+
 import io.ebean.Finder
+import io.ebean.Model
 import io.ebean.Query
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
 import jodd.crypt.DigestEngine
 import models.query.QUser
-import sz.DB
-import sz.EntityBean.BaseModel
 import sz.annotations.DBIndexed
+import sz.ebean.DB
 import sz.scaffold.ext.zeroUUID
 import java.sql.Timestamp
 import java.util.*
@@ -21,8 +22,9 @@ import javax.persistence.Version
 // This is a sample model class.
 //
 
+@Suppress("MemberVisibilityCanBePrivate", "PropertyName")
 @Entity
-class User : BaseModel() {
+class User(dataSource: String = "") : Model(dataSource) {
 
     @Id
     var id: Long = 0
@@ -61,8 +63,12 @@ class User : BaseModel() {
 
     companion object {
 
+        fun new(dsName: String = DB.currentDataSource()): User {
+            return User(dsName)
+        }
+
         fun finder(dsName: String = DB.currentDataSource()): Finder<Long, User> {
-            return finder<Long, User>(dsName)
+            return DB.finder(dsName)
         }
 
         fun query(dsName: String = DB.currentDataSource()): Query<User> {

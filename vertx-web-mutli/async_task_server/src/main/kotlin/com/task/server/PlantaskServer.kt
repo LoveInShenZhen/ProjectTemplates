@@ -1,36 +1,29 @@
 package com.task.server
 
-import plantask.redis.RedisTaskLoader
 import sz.AsynTask.AsyncTasksVerticle
 import sz.PlanTaskService
-import sz.SzEbeanConfig
+import sz.ebean.SzEbeanConfig
 import sz.scaffold.Application
-import sz.scaffold.tools.logger.Logger
 
 
 object PlantaskServer {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        SzEbeanConfig.loadConfig()
 
+        SzEbeanConfig.loadConfig()
         Application.setupVertx()
 
         Application.regOnStartHandler(10) {
-            PlanTaskService.Start()
+            PlanTaskService.start()
             AsyncTasksVerticle.deploy(Application.vertx)
-            RedisTaskLoader.deploy(Application.vertx)
         }
 
-
         Application.regOnStopHanlder(10) {
-            PlanTaskService.Stop()
+            PlanTaskService.stop()
             AsyncTasksVerticle.unDeploy()
-            RedisTaskLoader.unDeploy()
         }
 
         Application.setupOnStartAndOnStop()
-
-        Logger.debug("After Application.setupVertx()")
     }
 }

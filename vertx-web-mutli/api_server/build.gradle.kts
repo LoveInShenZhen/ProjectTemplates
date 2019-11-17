@@ -37,9 +37,9 @@ dependencies {
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 
-    api("com.github.kklongming:sz-scaffold:3.0.0-latest")
-    api("com.github.kklongming:sz-api-doc:3.0.0-latest")
-    api("com.github.kklongming:sz-plan-task:3.0.0-latest")
+    api("com.github.kklongming:sz-scaffold:3.0.0-dev")
+    api("com.github.kklongming:sz-api-doc:3.0.0-dev")
+    api("com.github.kklongming:sz-plan-task:3.0.0-dev")
 
     implementation(files("conf"))
     api(project(":models"))
