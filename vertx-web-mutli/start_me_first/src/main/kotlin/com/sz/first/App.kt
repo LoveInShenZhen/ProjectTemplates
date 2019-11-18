@@ -22,6 +22,13 @@ fun main(args: Array<String>) {
     h2server.start()
     Logger.info("Start h2 database server on localhost:$h2Port")
 
+    Application.regOnStopHanlder {
+        h2server.stop()
+        Logger.info("Stop h2 database server on localhost:$h2Port")
+    }
+
+    Application.setupOnStartAndOnStop()
+
     // 启动一个 standalone ZooKeeperServer
     val zooCfgPath = filePathJoin(Application.appHome, "conf", "zoo.cfg")
     ZooKeeperServerMain.main(arrayOf(zooCfgPath))

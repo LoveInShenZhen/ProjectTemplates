@@ -61,3 +61,15 @@ val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
+
+val distZip: Zip by tasks
+distZip.into(project.name) {
+    from(".")
+    include("conf/**")
+}
+
+val distTar: Tar by tasks
+distTar.into(project.name) {
+    from(".")
+    include("conf/**")
+}

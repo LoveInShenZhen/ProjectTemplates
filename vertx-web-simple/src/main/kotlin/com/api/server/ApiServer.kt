@@ -35,6 +35,7 @@ object ApiServer {
             Logger.info("Stop h2 database server on localhost:$h2Port")
         }
 
+        Application.setupOnStartAndOnStop()
         Application.runHttpServer()
 
     }
