@@ -1,4 +1,4 @@
-package com.api.server.controller.sysinfo.reply
+package com.api.server.controllers.sysinfo.reply
 
 import sz.scaffold.annotations.Comment
 

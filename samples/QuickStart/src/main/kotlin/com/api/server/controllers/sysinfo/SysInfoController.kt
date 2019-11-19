@@ -1,14 +1,14 @@
-package com.api.server.controller.sysinfo
+package com.api.server.controllers.sysinfo
 
-import com.api.server.controller.sysinfo.reply.EnvironmentReply
-import com.api.server.controller.sysinfo.reply.MemoryUsageReply
-import com.api.server.controller.sysinfo.reply.PropertiesReply
+import com.api.server.controllers.sysinfo.reply.EnvironmentReply
+import com.api.server.controllers.sysinfo.reply.MemoryUsageReply
+import com.api.server.controllers.sysinfo.reply.PropertiesReply
 import sz.scaffold.annotations.Comment
 import sz.scaffold.controller.ApiController
 
 
 @Comment("查询系统信息")
-class SysInfo : ApiController() {
+class SysInfoController : ApiController() {
 
     @Comment("查询系统当前运行环境下的环境变量")
     fun environments() : EnvironmentReply {

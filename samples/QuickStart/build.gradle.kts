@@ -8,7 +8,6 @@ plugins {
     application
 
     id("io.ebean").version("12.1.1")
-    kotlin("kapt").version("1.3.50")
 }
 
 
@@ -33,8 +32,6 @@ dependencies {
     implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
     implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
     implementation("com.github.kklongming:sz-plan-task:3.0.0-latest")
-
-    kapt("io.ebean:kotlin-querybean-generator:12.1.1")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -72,13 +69,6 @@ val distTar: Tar by tasks
 distTar.into(project.name) {
     from(".")
     include("conf/**")
-}
-
-ebean {
-    debugLevel = 2
-    queryBeans = true
-    kotlin = true
-    //generatorVersion = "11.4"
 }
 
 tasks.register<Delete>("removeLocalSzJarsCache") {

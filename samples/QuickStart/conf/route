@@ -2,23 +2,15 @@ GET     /                                                                sz.scaf
 POST    /                                                                sz.scaffold.controller.builtIn.Default.hello
 GET     /api/builtin/sysInfo                                             sz.scaffold.controller.builtIn.Default.sysInfo
 
-# 内置EBean
-GET     /api/builtin/ebean/CreateTablesSql                               controllers.builtin.szebean.CreateTablesSql     {"dataSource" : ""}
-GET     /api/builtin/ebean/DropTablesSql                                 controllers.builtin.szebean.DropTablesSql       {"dataSource" : ""}
-GET     /api/builtin/ebean/CreateIndexSql                                controllers.builtin.szebean.CreateIndexSql      {"dataSource" : ""}
-
-
 # Api 文档
-GET     /api/builtin/doc/apiIndex                                        sz.api.controllers.ApiDoc.apiIndex
-GET     /api/builtin/doc/apiTest                                         sz.api.controllers.ApiDoc.apiTest
-GET     /api/builtin/doc/apiDocMarkdown                                  sz.api.controllers.ApiDoc.apiDocMarkdown
-GET     /api/builtin/doc/apiDocHtml                                      sz.api.controllers.ApiDoc.apiDocHtml
-GET     /api/builtin/doc/pageIndex                                       sz.api.controllers.ApiDoc.pageIndex
-GET     /api/builtin/doc/pageTest                                        sz.api.controllers.ApiDoc.pageTest
+GET     /api/builtin/doc/apiIndex                                       sz.api.controllers.ApiDoc.apiIndex
+GET     /api/builtin/doc/apiTest                                        sz.api.controllers.ApiDoc.apiTest
+GET     /api/builtin/doc/apiDocMarkdown                                 sz.api.controllers.ApiDoc.apiDocMarkdown
+GET     /api/builtin/doc/apiDocHtml                                     sz.api.controllers.ApiDoc.apiDocHtml
+GET     /api/builtin/doc/pageIndex                                      sz.api.controllers.ApiDoc.pageIndex
+GET     /api/builtin/doc/pageTest                                       sz.api.controllers.ApiDoc.pageTest
 
-# 测试接口
-GET     /api/sample/hello                                                com.api.server.controller.Sample.hello
-
-GET     /api/v1/sysinfo/environments                                     com.api.server.controller.sysinfo.SysInfo.environments
-GET     /api/v1/sysinfo/sysProperties                                    com.api.server.controller.sysinfo.SysInfo.sysProperties
-GET     /api/v1/sysinfo/memUsage                                         com.api.server.controller.sysinfo.SysInfo.memUsage
+# 查询系统信息
+GET     /api/v1/sysinfo/environments                                    com.api.server.controllers.sysinfo.SysInfoController.environments
+GET     /api/v1/sysinfo/sysProperties                                   com.api.server.controllers.sysinfo.SysInfoController.sysProperties
+GET     /api/v1/sysinfo/memUsage                                        com.api.server.controllers.sysinfo.SysInfoController.memUsage
