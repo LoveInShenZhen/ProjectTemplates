@@ -13,6 +13,7 @@ object ApiServer {
         Application.setupVertx()
 
         Application.runHttpServer()
+        Application.setupOnStartAndOnStop()
     }
 
 }
