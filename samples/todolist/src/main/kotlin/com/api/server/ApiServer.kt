@@ -12,12 +12,7 @@ object ApiServer {
 
         Application.setupVertx()
 
-//        Application.regOnStartHandler(50) {
-//
-//        }
-
         Application.runHttpServer()
-
     }
 
 }

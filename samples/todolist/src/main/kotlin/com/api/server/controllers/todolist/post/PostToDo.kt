@@ -1,4 +1,4 @@
-package com.api.server.controller.post
+package com.api.server.controllers.todolist.post
 
 import models.todolist.ToDoPriority
 import sz.scaffold.annotations.Comment

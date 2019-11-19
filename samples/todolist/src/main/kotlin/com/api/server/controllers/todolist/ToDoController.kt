@@ -1,9 +1,9 @@
-package com.api.server.controller
+package com.api.server.controllers.todolist
 
-import com.api.server.controller.post.PostToDo
-import com.api.server.controller.reply.ToDoItem
-import com.api.server.controller.reply.ToDoItemListReply
-import com.api.server.controller.reply.ToDoItemReply
+import com.api.server.controllers.todolist.post.PostToDo
+import com.api.server.controllers.todolist.reply.ToDoItem
+import com.api.server.controllers.todolist.reply.ToDoItemListReply
+import com.api.server.controllers.todolist.reply.ToDoItemReply
 import models.todolist.ToDoPriority
 import models.todolist.ToDoTask
 import sz.ebean.DB
@@ -68,7 +68,7 @@ class ToDoController : ApiController() {
     suspend fun allTodos(): ToDoItemListReply {
         val reply = ToDoItemListReply()
 
-        DB.runTransactionAwait {
+        DB.runTransactionAwait(readOnly = true) {
             // 采用QueryBean的方式进行查询
             val todoTasks = ToDoTask.queryBean()
                 .where()

@@ -1,5 +1,6 @@
 package models.todolist
 
+
 import io.ebean.Finder
 import io.ebean.Model
 import io.ebean.Query
@@ -14,7 +15,7 @@ import javax.persistence.Entity
 import javax.persistence.Id
 import javax.persistence.Version
 
-@Suppress("MemberVisibilityCanBePrivate")
+@Suppress("MemberVisibilityCanBePrivate", "PropertyName")
 @Entity
 class ToDoTask(dataSource: String = "") : Model(dataSource) {
 
