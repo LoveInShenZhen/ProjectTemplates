@@ -15,9 +15,10 @@ import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentMap
 
-//
-// Created by kk on 2019/11/20.
-//
+/**
+ * 注: 该类的实现必须是线程安全的.
+ *     fun handle(webSocket: ServerWebSocket) 方法会被多个线程同时调用
+ */
 @Suppress("UNUSED_PARAMETER")
 class SampleWsHandler : WebSocketHandler {
 
@@ -55,6 +56,7 @@ class SampleWsHandler : WebSocketHandler {
             connect_time = JDateTime()
         )
 
+        // 将分配的 clientId 返回给客户端
         webSocket.writeFinalTextFrame(WsMessage.newMessage(ConnectedMsg(clientId)).toShortJson())
     }
 
