@@ -6,11 +6,13 @@ import io.vertx.core.eventbus.MessageConsumer
 import io.vertx.core.http.ServerWebSocket
 import jodd.datetime.JDateTime
 import sz.scaffold.Application
+import sz.scaffold.ext.failed
 import sz.scaffold.tools.json.toJsonPretty
 import sz.scaffold.tools.json.toShortJson
 import sz.scaffold.tools.logger.AnsiColor
 import sz.scaffold.tools.logger.Logger
 import sz.scaffold.websocket.WebSocketHandler
+import sz.scaffold.websocket.queryParams
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentMap
@@ -22,7 +24,20 @@ import java.util.concurrent.ConcurrentMap
 @Suppress("UNUSED_PARAMETER")
 class SampleWsHandler : WebSocketHandler {
 
+    /**
+     * 当服务端收到一个新的 webSocket 连接请求时, 系统调用此方法
+     */
     override fun handle(webSocket: ServerWebSocket) {
+
+//        // 获取 qurey 参数
+//        val queryParams = webSocket.queryParams()
+//        // 模拟检查token参数, 检查不通过则拒绝连接
+//        val token = queryParams.get("token")
+//        if (checkToken(token).failed()) {
+//            webSocket.reject(1000)
+//            return
+//        }
+
         // 分配一个唯一的 clientID
         val clientId = UUID.randomUUID().toString()
 
@@ -58,6 +73,13 @@ class SampleWsHandler : WebSocketHandler {
 
         // 将分配的 clientId 返回给客户端
         webSocket.writeFinalTextFrame(WsMessage.newMessage(ConnectedMsg(clientId)).toShortJson())
+    }
+
+    private fun checkToken(token: String): Boolean {
+        // 模拟检查 token, 不为空字符串就当做检查通过
+        // 检查通过返回true
+        Logger.debug("token : $token")
+        return token.isNotBlank()
     }
 
     private fun onEventBusBroadcastMsg(clientId: String, webSocket: ServerWebSocket, message: Message<WsMessage>) {
@@ -135,6 +157,9 @@ class SampleWsHandler : WebSocketHandler {
             Application.vertx.eventBus().registerDefaultCodec(WsMessage::class.java, WsMessageCodec())
         }
 
+        /**
+         * 根据 clientId 得到该连接对应的 event bus 上的消息地址
+         */
         fun unicastBusAddress(clientId: String): String {
             return "websocket.SampleWsHandler.unicast.$clientId"
         }
