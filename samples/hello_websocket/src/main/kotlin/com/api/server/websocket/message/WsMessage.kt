@@ -52,34 +52,3 @@ data class WsMessage(
         }
     }
 }
-
-class WsMessageCodec : MessageCodec<WsMessage, WsMessage> {
-
-    override fun decodeFromWire(pos: Int, buffer: Buffer): WsMessage {
-        val length = buffer.getInt(pos)
-        val startPos = pos + 4
-        val bytes = buffer.getBytes(startPos, startPos + length)
-        val jsonStr = String(bytes, CharsetUtil.UTF_8)
-        return Json.fromJsonString(jsonStr)
-    }
-
-    override fun systemCodecID(): Byte {
-        return -1
-    }
-
-    override fun encodeToWire(buffer: Buffer, s: WsMessage) {
-        val jsonStr = s.toShortJson()
-        val strBytes: ByteArray = jsonStr.toByteArray(CharsetUtil.UTF_8)
-        buffer.appendInt(strBytes.size)
-        buffer.appendBytes(strBytes)
-    }
-
-    override fun transform(s: WsMessage): WsMessage {
-        return s
-    }
-
-    override fun name(): String {
-        return "WsMessage"
-    }
-
-}

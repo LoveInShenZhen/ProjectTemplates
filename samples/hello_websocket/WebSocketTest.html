@@ -11,12 +11,12 @@
     <script>
         var socket;
         if (window.WebSocket) {
-            socket = new WebSocket("ws://localhost:9000/ws/sample");
+            socket = new WebSocket("ws://localhost:9000/ws/sample?token=fakeToken");
             // websocket收到消息
             socket.onmessage = function (event) {
                 // 如果服务端是写的二进制数据，则此处的blob也是一个二进制对象，提取数据时需要Blob类和FileReader类配合使用
                 var blob = event.data;
-                console.log("websocket 收到数据:" + blob);
+                console.log("websocket 收到数据:\n" + blob);
                 var content = $("#content").html();
                 $("#content").html(content + '<br>' + blob);
             };

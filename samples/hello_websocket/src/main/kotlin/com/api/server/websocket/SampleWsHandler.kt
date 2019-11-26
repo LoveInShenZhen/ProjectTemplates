@@ -6,6 +6,7 @@ import io.vertx.core.eventbus.MessageConsumer
 import io.vertx.core.http.ServerWebSocket
 import jodd.datetime.JDateTime
 import sz.scaffold.Application
+import sz.scaffold.eventbus.BeanMessageCodec
 import sz.scaffold.ext.failed
 import sz.scaffold.tools.json.toJsonPretty
 import sz.scaffold.tools.json.toShortJson
@@ -29,14 +30,14 @@ class SampleWsHandler : WebSocketHandler {
      */
     override fun handle(webSocket: ServerWebSocket) {
 
-//        // 获取 qurey 参数
-//        val queryParams = webSocket.queryParams()
-//        // 模拟检查token参数, 检查不通过则拒绝连接
-//        val token = queryParams.get("token")
-//        if (checkToken(token).failed()) {
-//            webSocket.reject(1000)
-//            return
-//        }
+        // 获取 qurey 参数
+        val queryParams = webSocket.queryParams()
+        // 模拟检查token参数, 检查不通过则拒绝连接
+        val token = queryParams.get("token")
+        if (checkToken(token).failed()) {
+            webSocket.reject(1000)
+            return
+        }
 
         // 分配一个唯一的 clientID
         val clientId = UUID.randomUUID().toString()
@@ -154,7 +155,7 @@ class SampleWsHandler : WebSocketHandler {
         const val broadcastBusAddress = "websocket.SampleWsHandler.broadcast"
 
         init {
-            Application.vertx.eventBus().registerDefaultCodec(WsMessage::class.java, WsMessageCodec())
+            Application.vertx.eventBus().registerDefaultCodec(WsMessage::class.java, BeanMessageCodec(WsMessage::class.java))
         }
 
         /**
