@@ -9,7 +9,6 @@ import sz.scaffold.Application
 import sz.scaffold.eventbus.BeanMessageCodec
 import sz.scaffold.ext.failed
 import sz.scaffold.tools.json.toJsonPretty
-import sz.scaffold.tools.json.toShortJson
 import sz.scaffold.tools.logger.AnsiColor
 import sz.scaffold.tools.logger.Logger
 import sz.scaffold.websocket.WebSocketHandler
