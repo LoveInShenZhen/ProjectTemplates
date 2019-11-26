@@ -73,7 +73,7 @@ class SampleWsHandler : WebSocketHandler {
         )
 
         // 将分配的 clientId 返回给客户端
-        webSocket.writeFinalTextFrame(WsMessage.newMessage(ConnectedMsg(clientId)).toShortJson())
+        webSocket.writeFinalTextFrame(WsMessage.newMessage(ConnectedMsg(clientId)).toJsonPretty())
     }
 
     private fun checkToken(token: String): Boolean {

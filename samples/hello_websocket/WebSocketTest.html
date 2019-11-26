@@ -41,17 +41,22 @@
             }
             if (socket.readyState == WebSocket.OPEN) {
                 socket.send(message);
-                document.getElementById('message').value = '';
+                console.log("消息发送成功");
                 
             } else {
                 alert("websocket连接未打开，请检查网络设置");
             }
+        }
+
+        function clearInput() {
+            document.getElementById('message').value = '';
         }
     </script>
     <form onsubmit="return false;">
         <!-- <input type="text" id="message" name="message" style="min-width: 480px;"> -->
         <textarea id="message" name="message" style="min-width: 640px; min-height: 320px;"></textarea>
         <input type="button" value="提交" onclick="send(this.form.message.value)">
+        <button onclick="clearInput()">清除输入</button>
         <div id="content"></div>
     </form>
 </body>
