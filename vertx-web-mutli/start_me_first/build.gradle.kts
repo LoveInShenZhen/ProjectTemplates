@@ -29,7 +29,7 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation(kotlin("stdlib-jdk8"))
 
-    api("com.github.kklongming:sz-scaffold:3.0.0-dev")
+    api("com.github.kklongming:sz-scaffold:3.0.0-latest")
     api("com.h2database:h2:1.4.200")
 
     api(files("conf"))

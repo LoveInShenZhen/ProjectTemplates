@@ -26,7 +26,7 @@ dependencies {
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.0")
 
-    api("com.github.kklongming:sz-ebean:3.0.0-dev")
+    api("com.github.kklongming:sz-ebean:3.0.0-latest")
     api("com.h2database:h2:1.4.200")
 
     kapt("io.ebean:kotlin-querybean-generator:12.1.1")

@@ -26,8 +26,8 @@ dependencies {
     implementation(kotlin("reflect"))
     
     api(files("conf"))
-    api("com.github.kklongming:sz-scaffold:3.0.0-dev")
-    api("com.github.kklongming:sz-api-doc:3.0.0-dev")
+    api("com.github.kklongming:sz-scaffold:3.0.0-latest")
+    api("com.github.kklongming:sz-api-doc:3.0.0-latest")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
