@@ -4,6 +4,7 @@ import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.default
 import com.github.ajalt.clikt.parameters.options.option
 import com.github.ajalt.clikt.parameters.types.file
+import jodd.datetime.JDateTime
 import sz.crypto.RsaUtil
 import sz.scaffold.ext.filePathJoin
 import sz.scaffold.tools.logger.AnsiColor
@@ -22,8 +23,9 @@ class CreateKeyPair : CliktCommand(name = "createKeyPair", help = "Create rsa pu
         destDir.mkdirs()
 
         val keyPair = RsaUtil.createPemKeyPair()
-        val publicKeyPath = filePathJoin(destDir.absolutePath, "publicKey.pem")
-        val privateKeyPath = filePathJoin(destDir.absolutePath, "privateKey.pem")
+        val timeStr = JDateTime().toString("YYYY_MM_DD-hhmmss")
+        val publicKeyPath = filePathJoin(destDir.absolutePath, "publicKey-$timeStr.pem")
+        val privateKeyPath = filePathJoin(destDir.absolutePath, "privateKey-$timeStr.pem")
         File(publicKeyPath).writeText(keyPair.first)
         File(privateKeyPath).writeText(keyPair.second)
 

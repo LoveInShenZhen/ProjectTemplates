@@ -30,8 +30,8 @@ RUNNING_PID
 *.iml
 *.ipr
 *.iws
-privateKey.pem
-publicKey.pem
+privateKey*.pem
+publicKey*.pem
 
 # office temp files
 ~$*
