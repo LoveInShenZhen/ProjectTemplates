@@ -59,12 +59,20 @@ val distZip: Zip by tasks
 distZip.into(project.name) {
     from(".")
     include("conf/**")
+    include("webroot/**")
 }
 
 val distTar: Tar by tasks
-distTar.into(project.name) {
-    from(".")
-    include("conf/**")
+distTar.enabled = false
+
+val installDist: Sync by tasks
+installDist.into("conf") {
+    from("./conf")
+    include("**")
+}
+installDist.into("webroot") {
+    from("./webroot")
+    include("**")
 }
 
 tasks.register<Delete>("removeLocalSzJarsCache") {
