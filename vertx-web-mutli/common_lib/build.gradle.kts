@@ -55,8 +55,6 @@ tasks.register<Jar>("sourcesJar") {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.kklongming"
-
             from(components["java"])
             artifact(tasks["sourcesJar"])
         }

@@ -44,7 +44,6 @@ dependencies {
     implementation(files("conf"))
     implementation(project(":models"))
     implementation(project(":common_lib"))
-    api("com.h2database:h2:1.4.200")
 
     configurations.all {
         this.exclude(group = "org.slf4j", module = "slf4j-log4j12")
@@ -53,7 +52,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = "com.task.server.PlantaskServer"
+    mainClassName = "com.task.server.PlanTaskServer"
     // 可以在此添加jvm内存参数, eg: '-Xms512m', '-Xmx4096m'
     applicationDefaultJvmArgs = listOf("-Duser.timezone=GMT+8", "-Dfile.encoding=UTF-8", "-Dsun.jnu.encoding=UTF-8")
 }

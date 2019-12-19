@@ -11,7 +11,8 @@ plugins {
 }
 
 allprojects {
-
+    // 修改成你项目的 groupId
+    group = "com.your.groupId"
 }
 
 tasks.register<Delete>("removeLocalSzJarsCache") {

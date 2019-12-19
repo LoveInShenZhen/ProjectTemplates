@@ -27,7 +27,6 @@ dependencies {
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
 
     api("com.github.kklongming:sz-ebean:3.0.0-latest")
-    api("com.h2database:h2:1.4.200")
 
     kapt("io.ebean:kotlin-querybean-generator:12.1.1")
 
@@ -55,8 +54,6 @@ tasks.register<Jar>("sourcesJar") {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.kklongming"
-
             from(components["java"])
             artifact(tasks["sourcesJar"])
         }

@@ -6,7 +6,7 @@ import sz.ebean.SzEbeanConfig
 import sz.scaffold.Application
 
 
-object PlantaskServer {
+object PlanTaskServer {
 
     @JvmStatic
     fun main(args: Array<String>) {
