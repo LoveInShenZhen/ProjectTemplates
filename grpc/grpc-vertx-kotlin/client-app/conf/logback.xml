@@ -32,20 +32,4 @@
 
     <logger name="App" level="DEBUG"/>
 
-    <!-- Off these ones as they are annoying, and anyway we manage configuration ourselves -->
-    <!-- SQL and bind values -->
-    <logger name="io.ebean.SQL" level="OFF"/>
-
-    <!-- Transaction Commit and Rollback events -->
-    <logger name="io.ebean.TXN" level="OFF"/>
-
-    <!-- Summary level details -->
-    <logger name="io.ebean.SUM" level="OFF"/>
-
-    <!-- L2 logging -->
-    <logger name="io.ebean.cache.QUERY" level="OFF"/>
-    <logger name="io.ebean.cache.BEAN" level="OFF"/>
-    <logger name="io.ebean.cache.COLL" level="OFF"/>
-    <logger name="io.ebean.cache.NATKEY" level="OFF"/>
-
 </configuration>

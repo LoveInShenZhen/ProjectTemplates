@@ -1,9 +1,10 @@
 package com.task.server
 
-import sz.AsynTask.AsyncTasksVerticle
-import sz.PlanTaskService
+
 import sz.ebean.SzEbeanConfig
 import sz.scaffold.Application
+import sz.task.PlanTaskService
+import sz.task.asynctask.AsyncTasksVerticle
 
 
 object PlanTaskServer {

@@ -9,7 +9,6 @@ import sz.scaffold.Application
 import sz.scaffold.eventbus.BeanMessageCodec
 import sz.scaffold.ext.failed
 import sz.scaffold.tools.json.toJsonPretty
-import sz.scaffold.tools.logger.AnsiColor
 import sz.scaffold.tools.logger.Logger
 import sz.scaffold.websocket.WebSocketHandler
 import sz.scaffold.websocket.queryParams
@@ -56,7 +55,7 @@ class SampleWsHandler : WebSocketHandler {
             // Set an exception handler on the read stream.
             Logger.warn("WebSocket: [$clientId] 有异常发生:\n$it")
         }.textMessageHandler {
-            Logger.debug("WebSocket: [$clientId] 接收到客户端发过来的消息:\n$it", AnsiColor.YELLOW)
+            Logger.debug("WebSocket: [$clientId] 接收到客户端发过来的消息:\n$it")
             onTextMessage(clientId, webSocket, it)
         }.pongHandler {
             Logger.debug("收到客户端 [$clientId] 的心跳 ping")

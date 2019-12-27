@@ -10,7 +10,6 @@ import jodd.datetime.JDateTime
 import jodd.util.RandomString
 import models.PlanTask
 import models.sample.User
-import sz.AsynTask.AsyncTask
 import sz.ebean.DB
 import sz.ebean.DDL
 import sz.ebean.runTransactionBlocking
@@ -22,6 +21,7 @@ import sz.scaffold.controller.reply.ReplyBase
 import sz.scaffold.tools.BizLogicException
 import sz.scaffold.tools.json.toJsonPretty
 import sz.scaffold.tools.logger.Logger
+import sz.task.asynctask.AsyncTask
 import java.util.*
 
 /**
