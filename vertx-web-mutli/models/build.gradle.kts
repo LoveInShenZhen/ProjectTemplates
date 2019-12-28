@@ -28,7 +28,7 @@ dependencies {
 
     api("com.github.kklongming:sz-ebean:3.0.0-latest")
 
-    kapt("io.ebean:kotlin-querybean-generator:12.1.1")
+    kapt("io.ebean:kotlin-querybean-generator:12.1.8")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

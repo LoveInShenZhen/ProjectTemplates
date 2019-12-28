@@ -7,7 +7,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application.
     application
 
-    id("io.ebean").version("12.1.1")
+    id("io.ebean").version("12.1.8")
     kotlin("kapt").version("1.3.61")
 }
 
@@ -35,7 +35,7 @@ dependencies {
     api("com.h2database:h2:1.4.200")
 
 
-    kapt("io.ebean:kotlin-querybean-generator:12.1.1")
+    kapt("io.ebean:kotlin-querybean-generator:12.1.8")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

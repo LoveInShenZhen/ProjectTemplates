@@ -7,7 +7,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application.
     application
 
-    id("io.ebean").version("12.1.1")
+    id("io.ebean").version("12.1.8")
     kotlin("kapt").version("1.3.61")
 }
 
@@ -33,7 +33,7 @@ dependencies {
     implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
     implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
 
-    kapt("io.ebean:kotlin-querybean-generator:12.1.1")
+    kapt("io.ebean:kotlin-querybean-generator:12.1.8")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

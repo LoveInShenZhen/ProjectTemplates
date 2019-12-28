@@ -7,7 +7,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application.
     application
 
-    id("io.ebean").version("12.1.1")
+    id("io.ebean").version("12.1.8")
 }
 
 
