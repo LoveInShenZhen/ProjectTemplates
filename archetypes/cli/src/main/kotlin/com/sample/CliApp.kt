@@ -17,12 +17,12 @@ class Hello : CliktCommand() {
     }
 }
 
-class CliApp {
-    companion object {
-        @JvmStatic
-        fun main(args: Array<String>) {
-            Logger.info("args: [${args.joinToString(", ")}]")
-            Hello().main(args)
-        }
+object CliApp {
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        Logger.info("args: [${args.joinToString(", ")}]")
+        Hello().main(args)
     }
+
 }
