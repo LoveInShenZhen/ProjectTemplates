@@ -39,7 +39,7 @@
                 alert('浏览器不支持 WebSocket');
                 return;
             }
-            if (socket.readyState == WebSocket.OPEN) {
+            if (socket.readyState === WebSocket.OPEN) {
                 socket.send(message);
                 console.log("消息发送成功");
                 

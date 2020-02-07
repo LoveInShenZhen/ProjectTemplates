@@ -71,7 +71,7 @@ class SampleWsHandler : WebSocketHandler {
         )
 
         // 将分配的 clientId 返回给客户端
-        webSocket.writeFinalTextFrame(WsMessage.newMessage(ConnectedMsg(clientId)).toJsonPretty())
+        webSocket.writeTextMessage(WsMessage.newMessage(ConnectedMsg(clientId)).toJsonPretty())
     }
 
     private fun checkToken(token: String): Boolean {
@@ -82,11 +82,11 @@ class SampleWsHandler : WebSocketHandler {
     }
 
     private fun onEventBusBroadcastMsg(clientId: String, webSocket: ServerWebSocket, message: Message<WsMessage>) {
-        webSocket.writeFinalTextFrame(message.body().toJsonPretty())
+        webSocket.writeTextMessage(message.body().toJsonPretty())
     }
 
     private fun onEventBusUnicastMsg(clientId: String, webSocket: ServerWebSocket, message: Message<WsMessage>) {
-        webSocket.writeFinalTextFrame(message.body().toJsonPretty())
+        webSocket.writeTextMessage(message.body().toJsonPretty())
     }
 
     private fun registBroadcastMsgConsumer(clientId: String, webSocket: ServerWebSocket): MessageConsumer<WsMessage> {
