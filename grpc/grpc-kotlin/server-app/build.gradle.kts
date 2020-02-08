@@ -25,7 +25,7 @@ repositories {
     jcenter()
 }
 
-val grpcVersion = "1.22.1"
+val grpcVersion = "1.27.0"
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.

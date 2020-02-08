@@ -3,7 +3,7 @@ package com.sample
 import com.examples.GreeterGrpc
 import com.examples.HelloReply
 import com.examples.HelloRequest
-import io.vertx.core.Future
+import io.vertx.core.Promise
 import sz.scaffold.tools.logger.Logger
 import java.util.concurrent.ForkJoinPool
 
@@ -12,8 +12,7 @@ import java.util.concurrent.ForkJoinPool
 //
 @Suppress("DEPRECATION")
 class GreeterVertxService : GreeterGrpc.GreeterVertxImplBase() {
-
-    override fun sayHello(request: HelloRequest, response: Future<HelloReply>) {
+    override fun sayHello(request: HelloRequest, response: Promise<HelloReply>) {
         ForkJoinPool.commonPool().submit {
             try {
                 val replyMsg = "你好! ${request.name}, 请开始你的表演!"

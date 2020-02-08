@@ -15,7 +15,7 @@ plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     id("maven-publish")
 
-    id("com.google.protobuf").version("0.8.10")
+    id("com.google.protobuf").version("0.8.11")
 }
 
 repositories {
@@ -29,7 +29,8 @@ repositories {
     jcenter()
 }
 
-val grpcVersion = "1.22.1"
+val grpcVersion = "1.27.0"
+val protobufVersion = "3.11.3"
 
 dependencies {
     // Use the Kotlin JDK 8 standard library.
@@ -41,7 +42,7 @@ dependencies {
     // 参考: https://www.jianshu.com/p/f34c179bc9d0 根据需要选择使用不同的依赖设定方式
 
     // grpc for java, ref: https://github.com/grpc/grpc-java
-    api("com.google.protobuf:protobuf-java:3.6.1")
+    api("com.google.protobuf:protobuf-java:$protobufVersion")
     api("io.grpc:grpc-stub:$grpcVersion")
     api("io.grpc:grpc-protobuf:$grpcVersion")
 
@@ -81,7 +82,7 @@ protobuf {
 //    generatedFilesBaseDir = "$projectDir/src/generated"
     protoc {
         // The artifact spec for the Protobuf Compiler
-        artifact = "com.google.protobuf:protoc:3.7.1"
+        artifact = "com.google.protobuf:protoc:$protobufVersion"
     }
     plugins {
         // Optional: an artifact spec for a protoc plugin, with "grpc" as
