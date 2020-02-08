@@ -59,3 +59,6 @@ val compileTestKotlin: KotlinCompile by tasks
 compileTestKotlin.kotlinOptions {
     jvmTarget = "1.8"
 }
+
+val distTar: Tar by tasks
+distTar.enabled = false
