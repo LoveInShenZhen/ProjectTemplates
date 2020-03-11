@@ -27,7 +27,7 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation(kotlin("stdlib-jdk8"))
     //implementation(kotlin("reflect"))
-    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
+    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.4")
     
     api(project(":models"))
 

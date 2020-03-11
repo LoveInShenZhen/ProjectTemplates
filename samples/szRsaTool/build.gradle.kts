@@ -8,7 +8,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm").version("1.3.61")
+    id("org.jetbrains.kotlin.jvm").version("1.3.70")
 
     // Apply the application plugin to add support for building a CLI application.
     application
@@ -29,7 +29,7 @@ dependencies {
     // Use the Kotlin JDK 8 standard library.
     implementation(kotlin("stdlib-jdk8"))
     //implementation(kotlin("reflect"))
-    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.2")
+    //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.4")
     implementation("com.github.kklongming:sz-crypto:3.0.0-dev")
     implementation("com.github.kklongming:sz-tools:3.0.0-dev")
     implementation("com.github.ajalt:clikt:2.3.0")
