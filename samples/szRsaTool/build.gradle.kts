@@ -30,8 +30,8 @@ dependencies {
     implementation(kotlin("stdlib-jdk8"))
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.4")
-    implementation("com.github.kklongming:sz-crypto:3.0.0-dev")
-    implementation("com.github.kklongming:sz-tools:3.0.0-dev")
+    implementation("com.github.kklongming:sz-crypto:3.1.0-latest")
+    implementation("com.github.kklongming:sz-tools:3.1.0-latest")
     implementation("com.github.ajalt:clikt:2.3.0")
 
     // Use the Kotlin test library.

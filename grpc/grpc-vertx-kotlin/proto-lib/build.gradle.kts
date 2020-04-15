@@ -45,7 +45,7 @@ dependencies {
     api("com.google.protobuf:protobuf-java:$protobufVersion")
     api("io.grpc:grpc-stub:$grpcVersion")
     api("io.grpc:grpc-protobuf:$grpcVersion")
-    api("io.vertx:vertx-grpc:3.8.5")
+    api("io.vertx:vertx-grpc:3.9.0")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
