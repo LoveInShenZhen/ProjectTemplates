@@ -28,10 +28,10 @@ dependencies {
     implementation(kotlin("reflect"))
     
     implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:3.0.0-latest")
-    implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
-    implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
-    implementation("com.github.kklongming:sz-plan-task:3.0.0-latest")
+    implementation("com.github.kklongming:sz-scaffold:3.1.0-latest")
+    implementation("com.github.kklongming:sz-ebean:3.1.0-latest")
+    implementation("com.github.kklongming:sz-api-doc:3.1.0-latest")
+    implementation("com.github.kklongming:sz-plan-task:3.1.0-latest")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

@@ -29,9 +29,9 @@ dependencies {
     implementation(kotlin("reflect"))
     
     implementation(files("conf"))
-    implementation("com.github.kklongming:sz-scaffold:3.0.0-latest")
-    implementation("com.github.kklongming:sz-ebean:3.0.0-latest")
-    implementation("com.github.kklongming:sz-api-doc:3.0.0-latest")
+    implementation("com.github.kklongming:sz-scaffold:3.1.0-latest")
+    implementation("com.github.kklongming:sz-ebean:3.1.0-latest")
+    implementation("com.github.kklongming:sz-api-doc:3.1.0-latest")
 
     kapt("io.ebean:kotlin-querybean-generator:12.1.8")
 

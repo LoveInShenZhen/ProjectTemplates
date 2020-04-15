@@ -28,8 +28,8 @@ dependencies {
     implementation(kotlin("reflect"))
     
     api(files("conf"))
-    api("com.github.kklongming:sz-scaffold:3.0.0-latest")
-    api("com.github.kklongming:sz-api-doc:3.0.0-latest")
+    api("com.github.kklongming:sz-scaffold:3.1.0-latest")
+    api("com.github.kklongming:sz-api-doc:3.1.0-latest")
     api("io.vertx:vertx-web-client:3.8.4")
 
     // Use the Kotlin test library.

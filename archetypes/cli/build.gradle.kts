@@ -31,7 +31,7 @@ dependencies {
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.4")
     implementation("com.github.ajalt:clikt:2.3.0")
-    implementation("com.github.kklongming:sz-log:3.0.0-latest")
+    implementation("com.github.kklongming:sz-log:3.1.0-latest")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
