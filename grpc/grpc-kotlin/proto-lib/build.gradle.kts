@@ -10,7 +10,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id("java")
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    id("org.jetbrains.kotlin.jvm")
+    kotlin("jvm")
 
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
     id("maven-publish")
