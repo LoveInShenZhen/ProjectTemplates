@@ -23,8 +23,6 @@ repositories {
 }
 
 dependencies {
-    // Use the Kotlin JDK 8 standard library.
-    implementation(kotlin("stdlib-jdk8"))
     implementation(kotlin("reflect"))
     
     api(files("conf"))

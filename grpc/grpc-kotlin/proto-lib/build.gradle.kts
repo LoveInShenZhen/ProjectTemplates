@@ -33,8 +33,6 @@ val grpcVersion = "1.27.0"
 val protobufVersion = "3.11.3"
 
 dependencies {
-    // Use the Kotlin JDK 8 standard library.
-    implementation(kotlin("stdlib-jdk8"))
     //implementation(kotlin("reflect"))
     //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.3.4")
 

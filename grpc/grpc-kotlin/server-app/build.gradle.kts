@@ -28,9 +28,6 @@ repositories {
 val grpcVersion = "1.27.0"
 
 dependencies {
-    // Use the Kotlin JDK 8 standard library.
-    implementation(kotlin("stdlib-jdk8"))
-
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
