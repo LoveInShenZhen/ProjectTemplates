@@ -2,13 +2,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM.
-    kotlin("jvm").version("1.4.10")
+    kotlin("jvm").version("1.5.31")
 
     // Apply the application plugin to add support for building a CLI application.
     application
 
     id("io.ebean").version("12.1.8")
-    kotlin("kapt").version("1.4.10")
+    kotlin("kapt").version("1.5.31")
 }
 
 
@@ -16,7 +16,7 @@ repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     maven {
-        url = uri("http://kklongming.github.io/repository")
+        url = uri("https://kklongming.github.io/repository")
     }
     mavenLocal()
     mavenCentral()
